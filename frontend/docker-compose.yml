@@ -10,7 +10,10 @@ services:
     volumes:
       - ./web-ingegno/www:/app/www
       - ./web-ingegno/src:/app/src
+      - ./web-ingegno/firebase.json:/app/firebase.json
+      - ./web-ingegno/.firebaserc:/app/.firebaserc
     ports:
       - 4200:4200
     environment:
+      FIREBASE_TOKEN: you-token
       NODE_ENV: development
